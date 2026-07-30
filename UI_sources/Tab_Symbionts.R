@@ -5,7 +5,7 @@ list(
   br(),
   p("The three most widely used clonal lines are currently F003, H2 and CC7."),
   p("Each have specific associations with Symbiont strains."),
-  img(src = "img/Aiptasia_endogenous_symbionts_corrected.png",style="width: 480px"),
+  img(src = "img/Aiptasia_endogenous_symbionts.png",style="width: 480px"),
   br(),
   hr(),
   h4("Symbiont genomes"),
