@@ -15,7 +15,7 @@ library(gridExtra)
 
 ### Load data ----
 
-sym_Atlas = readRDS("data/SymAtlas/Sym_clustering.dims_50.res_05.RDS")
+sym_Atlas = readRDS("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.RDS")
 
 
 

@@ -1,5 +1,5 @@
 ### Tab Sym Atlas ----
-Sym_markers <-  read.csv("data/SymAtlas/Sym_markers_pos_and_neg.tsv", header = TRUE, sep = "\t")
+Sym_markers <-  read.csv("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.markers.sensitive.all.tab", header = TRUE, sep = "\t")
 Sym_markers$p_val_adj <- signif(as.numeric(Sym_markers$p_val_adj), digits = 2)
 Sym_markers$avg_log2FC <- round(Sym_markers$avg_log2FC, digits = 3)
 # First panel to query a single gene and generate a Featureplot
