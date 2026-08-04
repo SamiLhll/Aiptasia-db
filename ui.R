@@ -23,7 +23,7 @@ shinyUI(
   page_navbar(
     fillable = FALSE,
     title = div(
-      img(src = "img/Aiptasia-db_logo_2025_nobg.png", style = "width: 500px; margin-right: 50px;")),
+      img(src = "img/Aiptasia-db_logo_2025_nobg.png", style = "width: 450px; margin-right: 30px; margin-left: 20px")),
     window_title = "Aiptasia-db",
     theme = bs_theme(
       version = 5,
@@ -79,8 +79,9 @@ shinyUI(
     # FOOTER
     ##################################################
     footer = div(
-      style = "margin-top: 60px; padding: 20px 40px; border-top: 1px solid #dee2e6; background-color: #f8f9fa;",
-      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/07/31). It is a project from the ",
+      style = "margin-top: 60px; padding: 20px 20px; border-top: 1px solid #dee2e6; background-color: #f8f9fa;",
+      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/07/31)."),
+      p("It is a project from the ",
         a("Guse lab", href = "https://guselab.de/", target = "_blank"),
         " in Ludwig-Maximilians-Universität."),
       p("It is implemented and maintained by ",
