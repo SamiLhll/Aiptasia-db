@@ -1,7 +1,7 @@
 ### Tab Sym Atlas ----
 Sym_markers <-  read.csv("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.markers.sensitive.all.tab", header = TRUE, sep = "\t")
-Sym_markers$p_val_adj <- signif(as.numeric(Sym_markers$p_val_adj), digits = 2)
-Sym_markers$avg_log2FC <- round(Sym_markers$avg_log2FC, digits = 3)
+# Sym_markers$p_val_adj <- signif(as.numeric(Sym_markers$p_val_adj), digits = 2)
+# Sym_markers$avg_log2FC <- round(Sym_markers$avg_log2FC, digits = 3)
 # First panel to query a single gene and generate a Featureplot
 # reactive of input text and search button 
 reactive_value_featureplot_symAtlas <- reactiveValues(data = NULL)
@@ -24,8 +24,10 @@ output$subset_fun_annot_feature <- renderDataTable({
 })
 # Marker
 output$subset_marker_feature <- renderDataTable({
-  if (is.null(reactive_value_featureplot_symAtlas$data)) return ()
-  datatable(Sym_markers[Sym_markers$LOC == reactive_value_featureplot_symAtlas$data,],options = list(dom = 't'))
+  if (is.null(reactive_value_featureplot_symAtlas$data)) return()
+  datatable(Sym_markers[Sym_markers$LOC == reactive_value_featureplot_symAtlas$data,], options = list(dom = 't')) %>%
+    formatSignif(columns = c("p_val", "p_val_adj"), digits = 3) %>%
+    formatRound(columns = "avg_log2FC", digits = 3)
 })
 
 # Second Panel to query a list of genes
@@ -56,14 +58,17 @@ output$subset_fun_annot_feature_list <- renderDataTable({
   datatable(data_table_fun_annot[data_table_fun_annot$LOC %in% reactive_value_Dotplot_symAtlas$data,],options = list(dom = 't'))
 })
 
-# Markers
+# Markers (list query)
 output$subset_marker_feature_list <- renderDataTable({
-  if (is.null(reactive_value_Dotplot_symAtlas$data)) return ()
-  datatable(Sym_markers[Sym_markers$LOC %in% reactive_value_Dotplot_symAtlas$data,],options = list(dom = 't'))
+  if (is.null(reactive_value_Dotplot_symAtlas$data)) return()
+  datatable(Sym_markers[Sym_markers$LOC %in% reactive_value_Dotplot_symAtlas$data,], options = list(dom = 't')) %>%
+    formatSignif(columns = c("p_val", "p_val_adj"), digits = 3) %>%
+    formatRound(columns = "avg_log2FC", digits = 3)
 })
-
 
 # Third Panel to explore the table of markers
 output$table_markers_Sym_atlas <- renderDataTable({
-  datatable(Sym_markers)
+  datatable(Sym_markers) %>%
+    formatSignif(columns = c("p_val", "p_val_adj"), digits = 3) %>%
+    formatRound(columns = "avg_log2FC", digits = 3)
 })

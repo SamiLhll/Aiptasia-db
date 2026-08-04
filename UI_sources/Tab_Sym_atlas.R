@@ -59,9 +59,16 @@ navset_pill_list(
   ################################################
   # QUERY 3 - MARKER TABLE
   ################################################
+  # nav_panel(
+  #   title = "3 - Table of marker genes",
+  #   h4("Query the table of marker genes by keyword"),
+  #   dataTableOutput("table_markers_Sym_atlas")
+  # )
   nav_panel(
     title = "3 - Table of marker genes",
-    h4("Query the table of marker genes by keyword"),
-    dataTableOutput("table_markers_Sym_atlas")
+    div(style = "max-width: 1300px;",
+        h4("Query the table of marker genes by keyword"),
+        dataTableOutput("table_markers_Sym_atlas")
+    )
   )
 )
