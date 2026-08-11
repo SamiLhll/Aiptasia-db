@@ -25,7 +25,7 @@ output$subset_fun_annot_feature <- renderDataTable({
 # Marker
 output$subset_marker_feature <- renderDataTable({
   if (is.null(reactive_value_featureplot_symAtlas$data)) return()
-  datatable(Sym_markers[Sym_markers$LOC == reactive_value_featureplot_symAtlas$data,], options = list(dom = 't')) %>%
+  datatable(Sym_markers[Sym_markers$gene == reactive_value_featureplot_symAtlas$data,], options = list(dom = 't')) %>%
     formatSignif(columns = c("p_val", "p_val_adj"), digits = 3) %>%
     formatRound(columns = "avg_log2FC", digits = 3)
 })
@@ -46,9 +46,12 @@ observeEvent(input$search_button_list_of_features_sym_atlas, {
 # Dotplot
 output$DotPlot_SymAtlas <- renderPlot({
   if (is.null(reactive_value_Dotplot_symAtlas$data)) return()
-  Seurat::DotPlot(sym_Atlas,features = reactive_value_Dotplot_symAtlas$data,cols = "RdBu") +
-    # ggplot2::scale_fill_brewer("RdBu") +
-    ggplot2::labs(x="",y="") +
+  Seurat::DotPlot(sym_Atlas,
+                  features = reactive_value_Dotplot_symAtlas$data,
+                  cols = "RdBu",
+                  scale.min = input$dotplot_pct_range_sym_atlas[1],
+                  scale.max = input$dotplot_pct_range_sym_atlas[2]) +
+    ggplot2::labs(x = "", y = "") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
 })
 # test with LOC110243280,LOC110233265
@@ -61,7 +64,7 @@ output$subset_fun_annot_feature_list <- renderDataTable({
 # Markers (list query)
 output$subset_marker_feature_list <- renderDataTable({
   if (is.null(reactive_value_Dotplot_symAtlas$data)) return()
-  datatable(Sym_markers[Sym_markers$LOC %in% reactive_value_Dotplot_symAtlas$data,], options = list(dom = 't')) %>%
+  datatable(Sym_markers[Sym_markers$gene %in% reactive_value_Dotplot_symAtlas$data,], options = list(dom = 't')) %>%
     formatSignif(columns = c("p_val", "p_val_adj"), digits = 3) %>%
     formatRound(columns = "avg_log2FC", digits = 3)
 })
