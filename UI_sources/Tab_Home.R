@@ -25,8 +25,8 @@ list(
               p("All available public datasets from NCBI are here referenced in a table to help reviewing Aiptasia's literature.")
             ),
             card(
-              card_header(h5("Symbiotic cell atlas")),
-              p("Browse the single cell RNA-seq atlas of full Symbiotic polyps")
+              card_header(h5("Single-cell atlases")),
+              p("Browse the single cell RNA-seq atlases of full Symbiotic polyps (Sym atlas) and the integrated Aposymbiotic and Symbiotic polyps (Apo-Sym atlas)")
               # h4("● Single-cell Atlas browser"),
               # p("Browse the single cell RNA-seq atlas of full Symbiotic and Aposymbiotic anemones"),
               # p("The 10X sequencing reads from APO and SYM specimens were mapped to the Aiptasia reference genome (refseq) using cellranger, 

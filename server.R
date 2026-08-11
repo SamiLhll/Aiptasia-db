@@ -16,6 +16,7 @@ library(gridExtra)
 ### Load data ----
 
 sym_Atlas = readRDS("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.RDS")
+aposym_Atlas = readRDS("data/ApoSymAtlas/Clustered_atlas.Sym.1_2_3.Apo.1_2_C.19dims_res0.8.RDS")
 
 
 
@@ -34,7 +35,7 @@ shinyServer(function(input, output, session) {
   source(file = "Server_sources/NCBI.sources.R",local=TRUE)
   
   ### Symbiotic atlas
-  source(file= "Server_sources/Sym_Atlas.sources.R",local=TRUE)
+  source(file= "Server_sources/Single_cell_Atlases.sources.R",local=TRUE)
   
   ### Symbionts
   source(file = "Server_sources/Symbionts.sources.R",local=TRUE)

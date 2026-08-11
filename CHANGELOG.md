@@ -13,3 +13,4 @@
 
 - Use renv
 - Updated Sym atlas
+- added ApoSym atlas

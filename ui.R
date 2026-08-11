@@ -62,8 +62,8 @@ shinyUI(
               source("UI_sources/Tab_NCBI_public_data.R", local = TRUE)[1]
     ),
     
-    nav_panel(title = "Sym Atlas",
-              source("UI_sources/Tab_Sym_atlas.R", local = TRUE)[1]
+    nav_panel(title = "Single-cell",
+              source("UI_sources/Tab_single_cell.R", local = TRUE)[1]
     ),
     nav_panel(title = "LOPIT",
               source("UI_sources/Tab_LOPIT.R", local = TRUE)[1]
@@ -80,7 +80,7 @@ shinyUI(
     ##################################################
     footer = div(
       style = "margin-top: 60px; padding: 20px 20px; border-top: 1px solid #dee2e6; background-color: #f8f9fa;",
-      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/07/31)."),
+      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/08/11)."),
       p("It is a project from the ",
         a("Guse lab", href = "https://guselab.de/", target = "_blank"),
         " in Ludwig-Maximilians-Universität."),
