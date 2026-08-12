@@ -8,10 +8,9 @@ data_table_fun_annot$Panther <- stringr::str_replace_all(data_table_fun_annot$Pa
 data_table_fun_annot$refseq_desc <- stringr::str_replace_all(data_table_fun_annot$refseq_desc,"_"," ")
 data_table_fun_annot$KXJ <- stringr::str_replace_all(data_table_fun_annot$KXJ,"_"," ")
 data_table_fun_annot$AIP <- stringr::str_replace_all(data_table_fun_annot$AIP,"_"," ")
-data_table_fun_annot$KXJ_pepSize <- stringr::str_replace_all(data_table_fun_annot$KXJ_pepSize,"_"," ")
 # reorder columns :
 data_table_fun_annot <- data_table_fun_annot %>%
-  select(LOC,XM,XP,AIP,Chi2020,pepSize,refseq_desc,signalP,Pfam,KEGG,HumanGene,Nvec,Panther,geneID,gene_coords)
+  select(LOC,XM,XP,AIP,pepSize,refseq_desc,signalP,Pfam,KEGG,HumanGene,Panther,is_confident_TF,geneID,gene_coords)
 
 # Select columns to display :
 output$column_selector <- renderUI({

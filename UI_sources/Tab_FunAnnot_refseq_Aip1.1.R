@@ -2,7 +2,7 @@ list(
   div(style = "padding-left: 20px; padding-right: 20px;",
       h5("Browse the functional annotation of the predicted protein sequences."),
       h5("The full integrated dataset contains notably the following details:"),
-      h5("KEGG, Pfam, PANTHER, RBH with Hsap and Nvec, and original refseq description."),
+      h5("KEGG, Pfam, PANTHER, RBH with Hsap, and original refseq description."),
       # hr(),
       h5("The full table can be exported from the Downloads tab"),
       # downloadButton(outputId = "dl_fun_annot", label = " refseq_Aip1.1.fun_annotations.tsv"),
