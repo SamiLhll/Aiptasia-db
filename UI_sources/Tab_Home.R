@@ -54,6 +54,7 @@ list(
       br(),
       hr(),
       h3("Further resources"),
-      p("For more genomics resources, consult (", a("reefgenomics.org/", href = "http://reefgenomics.org/", target = "_blank"), ")")
+      p("For more genomics resources, consult (", a("reefgenomics.org/", href = "http://reefgenomics.org/", target = "_blank"), ")"),
+      p("For access to the source code of this app to run from local, consult (",a("github.com/SamiLhll/Aiptasia-db", href = "https://github.com/SamiLhll/Aiptasia-db", target = "_blank"), ")")
   )
 )
