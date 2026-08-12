@@ -15,8 +15,8 @@ library(gridExtra)
 
 ### Load data ----
 
-sym_Atlas = readRDS("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.RDS")
-aposym_Atlas = readRDS("data/ApoSymAtlas/Clustered_atlas.Sym.1_2_3.Apo.1_2_C.19dims_res0.8.RDS")
+sym_Atlas = readRDS("data/SymAtlas/Clustered_atlas.Sym.1_2_3.19dims_res0.7.trimmed.RDS")
+aposym_Atlas = readRDS("data/ApoSymAtlas/Clustered_atlas.Sym.1_2_3.Apo.1_2_C.19dims_res0.8.trimmed.RDS")
 
 
 
