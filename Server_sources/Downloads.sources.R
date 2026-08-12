@@ -9,18 +9,3 @@ output$dl_ncbi <- downloadHandler(
   content = function(con){
     file.copy("data/Aiptasia_public_DATA_NCBI.csv", con)
   })
-output$dl_CHI_genome_fa <- downloadHandler(
-  filename = "CHI-2020.fa.gz",
-  content = function(con){
-    file.copy("data/Genomes/CHI-2020/CHI-2020.fa.gz", con)
-  })
-output$dl_CHI_genome_gff <- downloadHandler(
-  filename = "CHI-2020.gff.gz",
-  content = function(con){
-    file.copy("data/Genomes/CHI-2020/CHI-2020.gff.gz", con)
-  })
-output$dl_CHI_genome_mito <- downloadHandler(
-  filename = "CHI-2020.assembled_mitochondrial_genome.fa",
-  content = function(con){
-    file.copy("data/Genomes/CHI-2020/CHI-2020.assembled_mitochondrial_genome.fa", con)
-  })
