@@ -54,7 +54,6 @@ list(
       br(),
       hr(),
       h3("Further resources"),
-      p("For open access research protocols, consult (", a("aiptasia-resource.org/", href = "http://aiptasia-resource.org/", target = "_blank"), ")"),
       p("For more genomics resources, consult (", a("reefgenomics.org/", href = "http://reefgenomics.org/", target = "_blank"), ")")
   )
 )

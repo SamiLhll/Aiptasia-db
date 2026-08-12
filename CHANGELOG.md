@@ -9,8 +9,9 @@
 
 - correction of bugs introduced in v.1.2.3 in the sym Atlas browser
 
-### v1.2.5 2026/08/01
+### v1.2.5 2026/08/12
 
 - Use renv
 - Updated Sym atlas
 - added ApoSym atlas
+- updated Fun annotation

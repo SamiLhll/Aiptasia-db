@@ -80,15 +80,16 @@ shinyUI(
     ##################################################
     footer = div(
       style = "margin-top: 60px; padding: 20px 20px; border-top: 1px solid #dee2e6; background-color: #f8f9fa;",
-      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/08/11)."),
+      p("You're seeing Aiptasia-db v1.2.5 (updated on 2026/08/12)."),
       p("It is a project from the ",
         a("Guse lab", href = "https://guselab.de/", target = "_blank"),
         " in Ludwig-Maximilians-Universität."),
       p("It is implemented and maintained by ",
         a("Sami El Hilali", href = "mailto:elhilali.sami@gmail.com", target = "_blank")),
       div(style = "display: flex; align-items: center; gap: 15px; margin-top: 15px;",
-          img(src = "img/Logo_LMU.png", style = "height: 50px"),
-          img(src = "img/Logo_guselab.jpeg", style = "height: 55px")
+          img(src = "img/Logo_guselab.jpeg", style = "height: 70px"),
+          img(src = "img/Logo_LMU.png", style = "height: 70px")
+          
       )
     )
   )
